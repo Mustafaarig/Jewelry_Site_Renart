@@ -29,7 +29,7 @@ function App() {
   const [filtered, setFiltered] = useState([]);
 
   useEffect(() => {
-  fetch('https://renart-backend-w3x5.onrender.com/products')
+  fetch('https://jewelry-site-renart.onrender.com/products')
     .then(res => {
       if (!res.ok) {
         throw new Error(`Sunucu hatası: ${res.status}`);
