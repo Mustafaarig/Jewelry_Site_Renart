@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: renart-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: GOLD_API_KEY
+        value: goldapi-2vng26qsmcsarqj7-io
+      - key: GOLD_API_URL
+        value: https://www.goldapi.io/api/XAU/USD
