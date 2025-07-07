@@ -1,0 +1,321 @@
+/* FONTLAR */
+@font-face {
+  font-family: 'AvenirBook';
+  src: url('./Fonts/avenir/Avenir-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('./Fonts/montserat/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MontserratMedium';
+  src: url('./Fonts/montserat/Montserrat-Medium.otf') format('opentype');
+}
+
+
+/* GENEL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'AvenirBook', sans-serif;
+  background: linear-gradient(to bottom right, #fff4e6, #fff9f1); /* turuncu uyumlu */
+  color: #333;
+}
+
+.App {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* BAŞLIK */
+.product-title {
+  font-family: 'AvenirBook';
+  font-size: 45px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+/* ALTIN FİYATI */
+.App > p {
+  font-family: 'MontserratMedium';
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* FİLTRE ALANI */
+.filter-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 120px;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* ÜRÜN KARTI */
+.product-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 260px;
+  min-width: 260px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  transition: 0.2s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-family: 'AvenirBook';
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.product-price {
+  font-family: 'MontserratRegular';
+  font-size: 15px;
+  color: #111;
+  margin: 6px 0;
+}
+
+/* RENK SEÇİMİ */
+.colors {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.color-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid #888;
+  cursor: pointer;
+}
+
+.color-label {
+  font-family: 'AvenirBook';
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* PUANLAMA */
+.product-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-family: 'MontserratMedium';
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.stars span {
+  transition: 0.2s ease;
+}
+.stars span:hover {
+  transform: scale(1.1);
+}
+
+/* SLICK CUSTOM */
+.slick-slider {
+  margin: 0 auto;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+/* OKLAR */
+.slick-prev,
+.slick-next {
+  width: 36px;
+  height: 36px;
+  background-color: #000;
+  color: white !important;
+  border-radius: 50%;
+  z-index: 99;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: white;
+  font-size: 20px;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 24px;
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  padding: 8px 12px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+/* DOTLAR */
+.slick-dots li button:before {
+  color: black;
+}
+.slick-dots li.slick-active button:before {
+  color: #000;
+}
+
+/* SCROLL BAR */
+.slick-track::-webkit-scrollbar {
+  height: 8px;
+}
+.slick-track::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.slick-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .product-title {
+    font-size: 32px;
+  }
+
+  .product-card {
+    width: 100%;
+    min-width: unset;
+    padding: 16px;
+  }
+
+  .product-name {
+    font-size: 13px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+
+  .color-label {
+    font-size: 11px;
+  }
+
+  .product-rating {
+    font-size: 13px;
+  }
+
+  input,
+  button {
+    font-size: 13px;
+    width: 90%;
+  }
+
+  .filter-area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .colors {
+    justify-content: center;
+  }
+}
+
+/* LOGO */
+.site-header {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  z-index: 99;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  opacity: 1;
+}
+
+/* BANNER GÖRSELİ */
+.header-banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.header-banner::before {
+  content: "";
+  background-image: url('/public/images/renartglobal_cover.jfif'); /* Veya public altındaki doğru yol */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.header-banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 28px;
+  font-family: 'AvenirBook';
+  color: #5e2a00;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
